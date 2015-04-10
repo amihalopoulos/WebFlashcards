@@ -17,7 +17,10 @@ get '/rounds/:id' do |id|
   erb :'rounds/show'
 end
 
-post 'rounds/:id' do
-
-  redirect '/rounds/:id'
+post '/rounds/:id' do |id|
+  card_id = params[:card_id]
+  card = Card.find(card_id)
+  correct = params[:answer] == card.answer
+  guess = Guess.create(round_id: id, card_id: card_id, correct: correct)
+  redirect "/rounds/#{id}"
 end

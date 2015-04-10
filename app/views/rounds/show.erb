@@ -1,5 +1,30 @@
-<h2> Welcome to Round askjdfkas </h2>
+<h2> <%= @card.question %> </h2>
+<br>
+
+<form name="guessForm" action="/rounds/<%=@round.id%>" method="POST">
+  <input type="text" name="answer" placeholder="Answer">
+  <input type="hidden" name="card_id" value="<%= @card.id %>">
+  <div id="answer" style="display:none"><%= @card.answer %></div>
+  <input type="button" value="Submit" onClick="javascript:check_answer()">
+</form>
 
 
-<%= @card.question %> <br>
-<%= @card.answer %>
+
+
+<script language="JavaScript">
+  function check_answer() {
+    document.getElementById("answer").style.display = "inline";
+    sleep(1000);
+    document.guessForm.submit();
+  }
+
+  function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }
+  }
+</script>
+
