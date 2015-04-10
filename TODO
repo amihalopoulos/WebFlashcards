@@ -6,7 +6,7 @@
 [ ] Rounds ( TARA )
 
 CONTROLLERS
-  [ ] auth ( ALEXEI )
+  [X] auth ( ALEXEI )
   [ ] rounds ( TARA )
   [ ] users ( DAN )
   [ ] decks ( DAN )
@@ -14,7 +14,7 @@ CONTROLLERS
 VIEWS
   [ ] user dashboard ( DAN )
   [ ] decks index (all decks for E-E-V-E-R-Y-O-N-E) ( DAN )
-  [ ] signin/singup/signout ( ALEXEI )
+  [X] signin/singup/signout ( ALEXEI )
   [ ] round ( TARA )
   [ ] stats ( TARA )
 
