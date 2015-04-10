@@ -1,6 +1,6 @@
 class CreateDecks < ActiveRecord::Migration
   def change
-    create_tables :decks do |t|
+    create_table :decks do |t|
       t.string :name, null: false
       t.string :description, null:false
 

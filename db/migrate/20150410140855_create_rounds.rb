@@ -1,6 +1,6 @@
 class CreateRounds < ActiveRecord::Migration
   def change
-    create_tables :rounds do |t|
+    create_table :rounds do |t|
       t.references :deck
       t.references :user
 
