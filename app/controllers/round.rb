@@ -1,5 +1,8 @@
 get '/rounds/:id' do |id|
   @round = Round.find(id)
+  # Temporary Deck retrieval method
+  @deck = Deck.find(params[:deck_id])
+  @user = current_user
   erb :'rounds/show'
 end
 
