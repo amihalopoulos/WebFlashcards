@@ -5,8 +5,7 @@ end
 
 post '/rounds' do
   deck = Deck.find(params[:id])
-  # When merge use current user helper method instead of database query
-  user = User.find(session[:user_id])
+  user = current_user
   round = Round.create(deck: deck, user: user)
   redirect "/rounds/#{round.id}"
 end
