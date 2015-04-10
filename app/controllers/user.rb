@@ -19,6 +19,6 @@ delete '/user/:id' do
 end
 
 get '/user/:id/history' do
-
+  @user = User.find(id)
   erb :'users/history'
 end

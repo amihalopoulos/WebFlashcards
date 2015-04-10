@@ -1,1 +1,11 @@
 <h2> show round history with stats </h2>
+<ul>
+  <% @user.rounds.each do |round| %>
+    <li>
+    <%= round.deck.description %>
+    <%= round.number_of_guesses %>
+    <%= round.number_of_cards %>
+    <%= round.guess_percentage %>
+    </li>
+  <% end %>
+</ul>

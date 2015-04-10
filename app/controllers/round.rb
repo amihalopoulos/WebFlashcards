@@ -13,8 +13,7 @@ end
 get '/rounds/:id' do |id|
   @round = Round.find(id)
   @deck = @round.deck
-  @card = @deck.cards.first
-  # @card = @round.next_card
+  @card = @round.next_card
   erb :'rounds/show'
 end
 

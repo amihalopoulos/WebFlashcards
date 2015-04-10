@@ -11,4 +11,16 @@ class Round < ActiveRecord::Base
     remaining_cards.sample
   end
 
+  def number_of_guesses
+    guesses.count
+  end
+
+  def number_of_cards
+    deck.cards.count
+  end
+
+  def guess_percentage
+    number_of_cards/number_of_guesses
+  end
+
 end
