@@ -4,7 +4,7 @@ end
 
 post '/signup' do
   user = User.create(params[:user])
-  session[:used_id] = user.id
+  session[:user_id] = user.id
   redirect '/'
 end
 
@@ -13,9 +13,9 @@ get '/signin' do
 end
 
 post '/signin' do
-  user = User.find_by(email: params[:email])
-  if user && user.authenticate(params[:password])
-    session[:user_id] = user_id
+  user = User.authenticate(params[:user])
+  if user
+    session[:user_id] = user.id
     redirect '/'
   else
     redirect '/signin'
