@@ -1,3 +1,22 @@
-<div class="container">
-  <h2>Home</h2>
-</div>
+<h1> Home Page ! </h1>
+
+<p> Display all decks available and button to go to user profile </p>
+
+<ul>
+  <% @decks.each do |deck| %>
+   <li><a href="javascript:get_deck_id(<%= deck.id %>)"><%= deck.name %></a></li> <br>
+  <% end %>
+
+</ul>
+
+<form name="newRoundForm" action="/rounds/new" method="POST">
+  <input type="hidden" name="deck_id" id="deck_id">
+</form>
+
+<script language="JavaScript">
+  function get_deck_id(deck_id) {
+    document.newRoundForm.deck_id.value = deck_id;
+    document.newRoundForm.submit();
+  }
+</script>
+
