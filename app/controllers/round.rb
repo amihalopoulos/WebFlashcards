@@ -1,16 +1,17 @@
 get '/rounds/new' do
-
   erb :'rounds/new'
 end
 
-post 'rounds/new' do
-  round = Round.create(params[:round])
-  redirect '/rounds/:id'
+post '/rounds/new' do
+  params[:deck_id]
+  round = Round.create(deck_id: params[:deck_id], user_id: current_user.id)
+  # TODO: error handling for round creation
+  redirect "/rounds/#{round.id}"
 end
 
 
 get '/rounds/:id' do |id|
-  # round id
+
 
   erb :'rounds/show'
 end

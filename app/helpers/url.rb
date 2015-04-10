@@ -1,4 +1,4 @@
-def round_url(id)
-
-
+def round_url(round)
+  "/rounds/#{round.id}"
 end
+
