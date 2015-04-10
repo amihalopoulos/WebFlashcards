@@ -25,9 +25,9 @@ namespace :generate do
     puts "Creating #{model_path}"
     File.open(model_path, 'w+') do |f|
       f.write(<<-EOF.strip_heredoc)
-        class #{model_name} < ActiveRecord::Base
-          # Remember to create a migration!
-        end
+      class #{model_name} < ActiveRecord::Base
+        # Remember to create a migration!
+      end
       EOF
     end
   end
@@ -49,10 +49,10 @@ namespace :generate do
     puts "Creating #{path}"
     File.open(path, 'w+') do |f|
       f.write(<<-EOF.strip_heredoc)
-        class #{name} < ActiveRecord::Migration
-          def change
-          end
+      class #{name} < ActiveRecord::Migration
+        def change
         end
+      end
       EOF
     end
   end
@@ -74,28 +74,31 @@ namespace :generate do
     puts "Creating #{path}"
     File.open(path, 'w+') do |f|
       f.write(<<-EOF.strip_heredoc)
-        require 'spec_helper'
+      require 'spec_helper'
 
-        describe #{name} do
-          pending "add some examples to (or delete) #{__FILE__}"
-        end
-      EOF
+      describe #{name} do
+      pending "add some examples to (or delete) #{__FILE__}"
     end
+    EOF
   end
+end
 
 end
 
 namespace :db do
-  desc "Create the database at #{DB_NAME}"
-  task :create do
-    puts "Creating database #{DB_NAME} if it doesn't exist..."
-    exec("createdb #{DB_NAME}")
-  end
+  desc "Drop, create, and migrate the database"
+  task :reset => [:drop, :create, :migrate, :seed]
 
   desc "Drop the database at #{DB_NAME}"
   task :drop do
     puts "Dropping database #{DB_NAME}..."
     exec("dropdb #{DB_NAME}")
+  end
+
+  desc "Create the database at #{DB_NAME}"
+  task :create do
+    puts "Creating database #{DB_NAME} if it doesn't exist..."
+    exec("createdb #{DB_NAME}")
   end
 
   desc "Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)."
