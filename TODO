@@ -1,31 +1,25 @@
-TODO
-
-[ ] Authentication
+                                ====
+                                TODO
+                                ====
+[ ] Authentication ( ALEXEI )
+[ ] Users & Decks ( DAN )
+[ ] Rounds ( TARA )
 
 CONTROLLERS
-  [ ] Routes
-      + auth
-      + rounds
-      + users
-      + decks
+  [ ] auth ( ALEXEI )
+  [ ] rounds ( TARA )
+  [ ] users ( DAN )
+  [ ] decks ( DAN )
 
 VIEWS
-  [ ] user dashboard
-  [ ] decks index (all decks for E-E-V-E-R-Y-O-N-E)
-  [ ] signin/singup/signout
-  [ ] round
-  [ ] stats
+  [ ] user dashboard ( DAN )
+  [ ] decks index (all decks for E-E-V-E-R-Y-O-N-E) ( DAN )
+  [ ] signin/singup/signout ( ALEXEI )
+  [ ] round ( TARA )
+  [ ] stats ( TARA )
 
-MODELS
-  [ ]
-  [ ]
-  [ ]
-  [ ]
+MODEL LOGIC
+  [ ] Round#correct_answer? (bool) ( TARA )
+  [ ] Round#increase! ( TARA )
 
-
-[ ]
-
-ALEXEI
-TARA
-DAN
 
