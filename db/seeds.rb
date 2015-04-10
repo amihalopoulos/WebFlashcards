@@ -21,3 +21,9 @@ world_capital_hash = {
 }
 
 Deck.create_new_deck(world_capital_hash)
+
+test_deck = Deck.create(name: "Test Deck", description: "Answers are the same numbers")
+
+5.times do |i|
+  test_deck.cards << Card.new(question: i.to_s, answer: i.to_s)
+end
