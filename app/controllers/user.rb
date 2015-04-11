@@ -1,9 +1,14 @@
 
 #edit
+get '/users/:id/edit' do |id|
+  @user = User.find(id)
+  erb :'users/edit'
+end
+
 put '/users/:id' do |id|
   user = User.find(id)
   user.update(params[:user])
-  redirect "/user/#{id}"
+  redirect "/users/#{id}"
 end
 
 #delete
@@ -19,5 +24,6 @@ get '/users/:id/history' do |id|
 end
 
 get '/users/:id' do |id|
+  @user = User.find(id)
   erb :'users/index'
 end
