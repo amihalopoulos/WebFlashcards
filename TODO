@@ -2,7 +2,7 @@
                                 TODO
                                 ====
 [ ] Authentication ( ALEXEI )
-[ ] Users & Decks ( DAN )
+[ ] Users ( DAN )
 [ ] Rounds ( TARA )
 
 CONTROLLERS
@@ -13,6 +13,11 @@ CONTROLLERS
 
 VIEWS
   [ ] user dashboard ( DAN )
+        + [ ] my stats
+        + [ ] fill in anchors to Alexei's deck controllers
+        + [ ] my stats
+        + [ ] deal with 'Play!' div
+
   [ ] decks index (all decks for E-E-V-E-R-Y-O-N-E) ( DAN )
   [X] signin/singup/signout ( ALEXEI )
   [ ] round ( TARA )
