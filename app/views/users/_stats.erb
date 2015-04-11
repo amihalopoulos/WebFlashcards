@@ -2,11 +2,11 @@
   <h3>My Stats</h3>
     <ol>
       <lh>Decks Played</lh>
-      <% @user.rounds.each do |round| %>
-        <li><%= round.deck.topic %>:
-            <%= round.num_correct %> correct,
-            <%= round.num_incorrect %> incorrect
-        </li>
-      <% end %>
+        <% @user.rounds.each do |round| %>
+          <li><%= round.deck.topic %>:
+              <%= round.num_correct %> correct,
+              <%= round.num_incorrect %> incorrect
+          </li>
+        <% end %>
     </ol>
 </div>
