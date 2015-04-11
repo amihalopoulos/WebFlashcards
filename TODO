@@ -15,9 +15,10 @@ VIEWS
   [ ] user dashboard ( DAN )
         + [X] my stats
         + [X] fill in anchors to Alexei's deck controllers
-        + [ ] deal with 'Play!' div
+        + [X] deal with 'Play!' div
+        + [X] create-new-deck button
 
-  [ ] decks index (all decks for E-E-V-E-R-Y-O-N-E) ( DAN )
+  [ ] decks index (all decks for E-E-V-E-R-Y-O-N-E) ( ALEXEI )
   [X] signin/singup/signout ( ALEXEI )
   [ ] round ( TARA )
   [ ] stats ( TARA )
