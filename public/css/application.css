@@ -1,0 +1,83 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+nav > ul > li {
+  font-weight: bold;
+}
+
+.dropdown > a {
+  border-radius: 4px;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.dropdown > a:hover {
+
+}
+
+/*-----------------------------*/
+
+.decks-container {
+  background: #fff;
+}
+
+.decks-row {
+  margin: 15px 0 15px 0;
+}
+
+.deck-small {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 200px;
+  border-radius: 3%;
+  background: #eee;
+}
+
+.deck-small-link {
+  color: #577492;
+  line-height: 200px;
+}
+
+.deck-small-link:hover {
+  text-decoration: none;
+  color: #577492;
+}
+
+/*-----------------------------*/
+
+.sign-up-container {
+  background: #fff;
+}
+
+.sign-up-header {
+  margin: 10px;
+}
+
+.sign-up-form {
+  padding: 10px;
+  border-radius: 2%;
+  text-align: center;
+  background: #ccc;
+  width: 500px;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-up-form-item {
+  margin: 5px 0 5px 0;
+}
+
