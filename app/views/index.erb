@@ -1,13 +1,23 @@
-<h1> Home Page ! </h1>
 
-<p> Display all decks available and button to go to user profile </p>
+<div class="container">
 
-<ul>
-  <% @decks.each do |deck| %>
-   <li><a href="javascript:get_deck_id(<%= deck.id %>)"><%= deck.name %></a></li> <br>
+
+</div>
+
+
+  <% @decks.each_slice(3) do |three_decks| %>
+    <div class="row">
+      <div class="row-same-height">
+    <% three_decks.each do |deck| %>
+      <div class="col-md-4 col-md-height">
+        <a class="deck-small-link" href="javascript:get_deck_id(<%= deck.id %>)">
+          <div class="deck-small"><%= deck.name %></div>
+        </a>
+      </div>
+    <% end %>
+      </div>
+    </div>
   <% end %>
-
-</ul>
 
 <form name="newRoundForm" action="/rounds/new" method="POST">
   <input type="hidden" name="deck_id" id="deck_id">
