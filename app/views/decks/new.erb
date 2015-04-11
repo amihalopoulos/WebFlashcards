@@ -1,0 +1,11 @@
+<form action="/decks/new" method="POST" enctype="multipart/form-data">
+  <br><label>Deck Name</label>
+  <br><input type="text" name="deck[name]">
+  <br><label>Deck Description</label>
+  <br><input type="text" name="deck[description]">
+  <input type="hidden" name="deck[user_id]" value="<%= current_user.id %>">
+  <input type="hidden" name="deck[path]" value="">
+  <br><label>Deck file (must be comma-delimited: question, answer)</label>
+  <br><input type="file" name="deck[file]">
+  <br><input type="submit" value="Upload">
+</form> 

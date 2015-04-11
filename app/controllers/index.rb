@@ -6,4 +6,3 @@ get '/' do
     redirect '/signin'
   end
 end
-

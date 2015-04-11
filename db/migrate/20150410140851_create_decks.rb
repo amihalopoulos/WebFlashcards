@@ -3,6 +3,7 @@ class CreateDecks < ActiveRecord::Migration
     create_table :decks do |t|
       t.string :name, null: false
       t.string :description, null:false
+      t.references :user
 
       t.timestamps
     end
