@@ -1,0 +1,26 @@
+<div class="container">
+  <form action="/card/<%=@card.id%>" method = "POST">
+    <table>
+      <input type="hidden" name="_method" value="PUT">
+      <input type="hidden" value='card[id]'>
+        <tr>
+          <td>
+            <label> Term: </label>
+          </td>
+          <td>
+            <input type="text" name= 'card[term]' value = <%= @card.term %>><br>
+          </td>
+        <tr>
+          <td>
+            <label> Definition: </label>
+          </td>
+          <td>
+            <input type="text" name= 'card[description]' value = <%= @card.description %>><br>
+          </td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit">
+
+    </tr>
+  </form>
+</div>

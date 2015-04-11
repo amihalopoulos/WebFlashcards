@@ -1,0 +1,21 @@
+<h1> <%= @deck.topic %> </h1>
+
+
+<table>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+      <% if @author %> <th>Change Card</th> <% end %>
+    </tr>
+  <% @deck.cards.each do |card| %>
+    <tr>
+      <td> <%= card.term %> </td>
+      <td> <%= card.description %> </td>
+      <% if @author %>
+      <td> <a href='/card/<%= card.id %>/edit'>Edit</a> | <a href=''>Delete</a></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<a href=''>Play!</a>
