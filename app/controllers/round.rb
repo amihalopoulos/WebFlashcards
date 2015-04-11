@@ -1,3 +1,5 @@
+require 'byebug'
+
 get '/rounds/new' do
   erb :'rounds/new'
 end
@@ -14,7 +16,11 @@ get '/rounds/:id' do |id|
   @round = Round.find(id)
   @deck = @round.deck
   @card = @round.next_card
-  erb :'rounds/show'
+  if @card.nil?
+    erb :'rounds/result'
+  else
+    erb :'rounds/show'
+  end
 end
 
 post '/rounds/:id' do |id|
