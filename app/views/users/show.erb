@@ -5,7 +5,7 @@
       <h3>My Decks</h3>
       <ul>
       <% @user.decks.each do |deck| %>
-        <li class='user_attributes'><a href='#'><%= deck.topic %></a></li>
+        <li class='user_attributes'><a href='deck/<%= deck.id %>'><%= deck.topic %></a></li>
       <% end %>
       </ul>
       <h3>My Stats</h3>
@@ -13,7 +13,8 @@
         <li><a href='#'>Stat 1</a></li>
       </ul>
     </div>
-    <h3>Play!</h3>
     <div id='play_form'>
+      <h3>Play a deck!</h3>
     </div>
 </div>
+
