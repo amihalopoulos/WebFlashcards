@@ -1,10 +1,5 @@
 
-<div class="container">
-
-
-</div>
-
-
+<div class="decks-container">
   <% @decks.each_slice(3) do |three_decks| %>
     <div class="row">
       <div class="row-same-height">
@@ -18,6 +13,7 @@
       </div>
     </div>
   <% end %>
+</div>
 
 <form name="newRoundForm" action="/rounds/new" method="POST">
   <input type="hidden" name="deck_id" id="deck_id">
