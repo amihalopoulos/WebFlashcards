@@ -27,3 +27,27 @@ test_deck = Deck.create(name: "Test Deck", description: "Answers are the same nu
 5.times do |i|
   test_deck.cards << Card.new(question: i.to_s, answer: i.to_s)
 end
+
+alpha_deck = Deck.create(name: "Alphabet Test Deck", description: "Learn your ABCs")
+
+['A', 'B', 'C', 'D', 'E'].each do |element|
+  alpha_deck.cards << Card.new(question: element, answer: element)
+end
+
+dummy_deck = Deck.create(name: "The Dummiest of Test Decks", description: "You know the answer")
+
+['dummy?', 'not dummy?'].each do |element|
+  dummy_deck.cards << Card.new(question: element, answer: 'yes')
+end
+
+full_alpha_deck = Deck.create(name: "Full Alphabet Deck", description: "Learn your ABCs")
+
+('A'..'Z').to_a.each do |element|
+  full_alpha_deck.cards << Card.new(question: element, answer: element)
+end
+
+binary_deck = Deck.create(name: "Binary Test Deck", description: "Learn Binary")
+
+['0','1'].each do |element|
+  binary_deck.cards << Card.new(question: element, answer: element)
+end
