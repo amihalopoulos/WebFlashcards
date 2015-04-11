@@ -11,7 +11,7 @@ post '/signin' do
   @user = User.find_by(name: params[:name])
   if @user && @user.authenticate(params[:password])
     session[:user_id] = @user.id
-    redirect '/'
+    redirect "/users/#{@user.id}"
   else
     flash[:error] = "Invalid username/password"
     redirect '/signin'
@@ -26,7 +26,7 @@ post '/signup' do
   @user = User.create(params[:user])
   session[:user_id] = @user.id
   if @user.valid?  #is this a good way to authenticate a user?
-    redirect '/'
+      redirect "/users/#{@user.id}"
   else
     redirect '/signup'
   end
