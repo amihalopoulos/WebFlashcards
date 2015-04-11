@@ -1,0 +1,8 @@
+<div id='user_decks'>
+  <h3>My Decks</h3>
+  <ul>
+    <% user_decks.each do |deck| %>
+      <li class='user_attributes'><a href='deck/<%= deck.id %>'><%= deck.topic %></a></li>
+    <% end %>
+  </ul>
+</div>
