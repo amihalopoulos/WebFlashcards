@@ -27,5 +27,6 @@ MODEL LOGIC
   [ ] Round#increase! ( TARA )
 
 DAN NOTES:
++ which round route should each deck link to in _foreign_decks partial ?
 + talk to team about adding method in round class to get date/time for rounds, to render in user stats
 
