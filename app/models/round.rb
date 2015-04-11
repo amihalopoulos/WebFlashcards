@@ -6,11 +6,12 @@ class Round < ActiveRecord::Base
   belongs_to :user
 
   def next_card
-    remaining_cards = deck.cards.dup
+    correct_cards = []
     guesses.each do |guess|
       card = guess.card
-      remaining_cards.delete(card) if remaining_cards.include?(card)
+      correct_cards << card if guess.correct
     end
+    remaining_cards = deck.cards - correct_cards
     remaining_cards.sample
   end
 
@@ -20,10 +21,6 @@ class Round < ActiveRecord::Base
 
   def number_of_cards
     deck.cards.count
-  end
-
-  def miss_rate
-    number_of_guesses - number_of_cards/number_of_cards
   end
 
 end
