@@ -1,10 +1,8 @@
 <div id='play_form'>
   <h3>Play a Deck!</h3>
-  <ul>
-    <% all_decks.each do |deck| %>
-      <%="<li> #{deck.topic} </li>" if deck.user_id != @user.id %>
-      <%= @user.not_my_decks %>
-    <% end %>
-  </ul>
-
+    <ul>
+      <% foreign_decks.each do |deck| %>
+       <li><%= deck.topic %></li>
+      <% end %>
+    </ul>
 </div>
