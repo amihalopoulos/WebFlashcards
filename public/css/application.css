@@ -9,9 +9,8 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+.decks-container {
+  background: #fff;
 }
 
 .dropdown > a {
@@ -25,6 +24,28 @@ body {
 .dropdown > a:hover {
 
 }
+
+.deck-small {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 200px;
+  border-radius: 3%;
+  background: #eee;
+}
+
+.deck-small-link {
+  color: #577492;
+  line-height: 200px;
+}
+
+.deck-small-link:hover {
+  text-decoration: none;
+  color: #577492;
+}
+
 
 
 

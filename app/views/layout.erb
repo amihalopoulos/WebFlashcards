@@ -31,10 +31,9 @@
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">Play</a></li>
             <li role="presentation">
               <div class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">User</a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">User <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                   <li><a href="/user/:id/edit">Settings</a></li>
                   <li><a href="/user/:id/history">History</a></li>
@@ -46,7 +45,7 @@
         <h3 class="text-muted">The Flasher</h3>
       </div>
 
-      <div class="jumbotron"><%= yield %></div>
+      <%= yield %>
 
       <footer class="footer">
       </footer>
