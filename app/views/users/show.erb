@@ -7,7 +7,7 @@
       <% @user.decks.each do |deck| %>
         <li class='user_attributes'><a href='deck/<%= deck.id %>'><%= deck.topic %></a></li>
       <% end %>
-      <%= erb :'users/_stats' %>
+      <%= erb :'users/_stats', locals: { user_rounds: @user.rounds } %>
     </div>
     <%= erb :'users/_all_decks', locals: { all_decks: Deck.all } %>
 </div>
