@@ -35,8 +35,8 @@
               <div class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">User <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <li><a href="/user/:id/edit">Settings</a></li>
-                  <li><a href="/user/:id/history">History</a></li>
+                  <li><a href="/user/<%= current_user.id %>">Settings</a></li>
+                  <li><a href="/user/<%= current_user.id %>/history">History</a></li>
                 </ul>
               </div>
             </li>
