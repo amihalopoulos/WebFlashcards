@@ -1,4 +1,3 @@
-require 'byebug'
 
 class Round < ActiveRecord::Base
   has_many :guesses
