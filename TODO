@@ -14,8 +14,7 @@ CONTROLLERS
 VIEWS
   [ ] user dashboard ( DAN )
         + [ ] my stats
-        + [ ] fill in anchors to Alexei's deck controllers
-        + [ ] my stats
+        + [X] fill in anchors to Alexei's deck controllers
         + [ ] deal with 'Play!' div
 
   [ ] decks index (all decks for E-E-V-E-R-Y-O-N-E) ( DAN )
@@ -27,4 +26,6 @@ MODEL LOGIC
   [ ] Round#correct_answer? (bool) ( TARA )
   [ ] Round#increase! ( TARA )
 
+DAN NOTES:
++ talk to team about adding method in round class to get date/time for rounds, to render in user stats
 
