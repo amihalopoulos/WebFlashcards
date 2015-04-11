@@ -9,8 +9,6 @@
       <% end %>
       <%= erb :'users/_stats' %>
     </div>
-    <div id='play_form'>
-      <h3>Play a deck!</h3>
-    </div>
+    <%= erb :'users/_all_decks', locals: { all_decks: Deck.all } %>
 </div>
 
