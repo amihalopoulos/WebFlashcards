@@ -1,5 +1,5 @@
 get '/signup' do
-  erb :'auth/signup'
+  erb :'auth/signup', layout: :sign_up_layout
 end
 
 post '/signup' do
@@ -9,7 +9,7 @@ post '/signup' do
 end
 
 get '/signin' do
-  erb :'auth/signin'
+  erb :'auth/signin', layout: :signed_out_layout
 end
 
 post '/signin' do
