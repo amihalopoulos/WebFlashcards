@@ -13,7 +13,7 @@ CONTROLLERS
 
 VIEWS
   [ ] user dashboard ( DAN )
-        + [ ] my stats
+        + [X] my stats
         + [X] fill in anchors to Alexei's deck controllers
         + [ ] deal with 'Play!' div
 
