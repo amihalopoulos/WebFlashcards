@@ -25,9 +25,9 @@
     <a href="/"><img src="http://static.ipaustralia.com.au/store3/12/18/1218937.1.high.jpg" class="logo"></a>
     <div id="login-toolbar">
       <% if current_user %>
-        <p> <a href=""> Home </a>|<a href="/users/<%= current_user.id %>"> <%= current_user.name %></a> | <a href="/signout"> Logout</a>
+        <p> <a href="/"> Home </a>|<a href="/users/<%= current_user.id %>"> <%= current_user.name %></a> | <a href="/signout"> Logout</a>
       <% else %>
-        <p><a href="/signup">Signup!</a> | <a href="/signin">Signin!</a> </p>
+        <p><a href="/"> Home </a> | <a href="/signup">Signup!</a> | <a href="/signin">Signin!</a> </p>
       <% end %>
   </header>
   <div class="error">
