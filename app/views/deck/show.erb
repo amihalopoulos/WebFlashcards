@@ -18,4 +18,13 @@
   <% end %>
 </table>
 
-<a href=''>Play!</a>
+
+
+<form action="/card/new" method="GET">
+  <input type="hidden" name='deck[topic]' value='<%= @deck.topic %>'>
+  <input type="submit" value="Add Card">
+</form>
+<div> <a href=''>Play!</a>
+
+
+

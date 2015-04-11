@@ -6,12 +6,14 @@ get '/deck/new' do
     redirect '/'
   end
 end
+
 post '/deck/new' do
   user = User.find(session[:user_id])
   @deck = user.decks.create(params[:deck])
 
   erb :'/deck/show'
 end
+
 get '/deck/:id' do |id|
   @deck = Deck.find(id)
   @author = users_deck?(@deck) ? true : false
