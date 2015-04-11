@@ -1,6 +1,6 @@
 <h2><% @deck.topic %></h2>
-<h3>Number of Cards <span class="numbers"><%= @deck.cards.count %></span></h3>
-<h3>Cards Remaining <span class="numbers"><%= card_count %></span></h3>
+<h3>Number of Cards <span class="numbers"><%= @cards.count %></span></h3>
+<h3>Cards Remaining <span class="numbers">3</span></h3>
 <div id="scoreboard">
   <table>
     <thead>
@@ -19,11 +19,11 @@
   </table>
 </div>
 <div id="current_card">
-  <%= erb :'card/show', locals: {current_card: current_card} %>
+  <h4><%= @cards[0].description %></h4>
 </div>
 <form action="/guess" method="POST">
   <input type="text" name="guess[user_input]" placeholder="Your guess here">
-  <input type="hidden" name="guess[card]" value="<%= current_card %>">
+  <input type="hidden" name="guess[card]" value="<%= @cards[0] %>">
   <input type="hidden" name="guess[round]" value="<%= @round %>">
   <input type="hidden" name="guess[user]" value="<%= current_user %>">
   <button type="submit">Submit Guess</button>
