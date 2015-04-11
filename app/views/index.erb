@@ -1,5 +1,10 @@
 
 <div class="decks-container">
+  <div class="row decks-row">
+    <div class="col-md-12 text-right">
+      <a href="/decks/new"><button class="btn btn-success">Create New Deck</button></a>
+    </div>
+  </div>
   <% @decks.each_slice(3) do |three_decks| %>
     <div class="row decks-row">
       <div class="row-same-height">
