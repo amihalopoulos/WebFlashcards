@@ -1,0 +1,10 @@
+<h2><% @deck.topic %></h2>
+<h3>Number of Cards <span class="numbers"><%= @deck.cards.count %></span></h3>
+<h3>Cards Remaining <span class="numbers"><%= @cards.count %></span></h3>
+<div id="scoreboard">
+  <%= erb :_scoreboard, locals: {round: @round} %>
+</div>
+<div id="current_card">
+  <%= erb :_card, locals: {card: @cur_card, round: @round, user: @user} %>
+</div>
+

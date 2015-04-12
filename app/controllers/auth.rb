@@ -1,4 +1,3 @@
-
 get '/' do
   @decks = Deck.all
 

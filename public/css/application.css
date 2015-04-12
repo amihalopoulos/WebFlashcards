@@ -65,3 +65,15 @@ code {
     margin-left: -1em;
     overflow: auto;
 }
+
+#card {
+    height: 300px;
+    width: 200px;
+    border: 8px solid #36AECC;
+    border-radius: 20px;
+}
+
+#card p {
+    margin: 100px auto;
+    font-size: 2em;
+}

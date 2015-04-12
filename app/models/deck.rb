@@ -5,4 +5,8 @@ class Deck < ActiveRecord::Base
   has_many :deck_users, through: :rounds, source: :user
 
   validates :topic, :user_id, presence: true
+
+  def shuffle(cards)
+    cards.shuffle
+  end
 end
