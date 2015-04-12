@@ -2,7 +2,7 @@
   <h3>My Decks</h3>
   <ol>
     <% user_decks.each do |deck| %>
-      <li class='user_attributes'><a href='deck/<%= deck.id %>'><%= deck.topic %></a></li>
+      <li class='user_attributes'><a href='/deck/<%= deck.id %>'><%= deck.topic %></a></li>
     <% end %>
   </ol>
   <div id='new_deck_button'>
