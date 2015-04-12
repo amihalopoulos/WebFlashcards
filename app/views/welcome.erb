@@ -1,1 +1,9 @@
-Welcome to my site!
+<h1>Welcome to TADPOLE FLASHCARDS!!<h1>
+<h2>Here are the flashcards that users have made:</h2>
+<ul>
+  <% @decks.each do |deck| %>
+    <li> <a href="/deck/<%= deck.id %>"><%= deck.topic %></a> </li>
+  <% end %>
+</ul>
+
+

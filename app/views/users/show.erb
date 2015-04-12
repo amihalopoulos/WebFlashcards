@@ -1,0 +1,19 @@
+<div id='user_dashboard'>
+  <h1>Dashboard</h1>
+    <div id='profile'>
+      <h2><%= @user.name %></h2>
+      <h3>My Decks</h3><a href="/deck/new">Create New Deck</a>
+      <ul>
+      <% @user.decks.each do |deck| %>
+        <li class='user_attributes'><a href='/deck/<%= deck.id %>'><%= deck.topic %></a></li>
+      <% end %>
+      </ul>
+      <h3>My Stats</h3>
+      <ul>
+        <li><a href='#'>Stat 1</a></li>
+      </ul>
+    </div>
+    <h3>Play!</h3>
+    <div id='play_form'>
+    </div>
+</div>

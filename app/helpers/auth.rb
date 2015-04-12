@@ -11,3 +11,7 @@ def error_message
   flash[:error] = nil
   msg
 end
+
+def users_deck?(deck)
+  current_user == deck.user
+end
