@@ -9,5 +9,4 @@ class Deck < ActiveRecord::Base
   def shuffle(cards)
     cards.shuffle
   end
-
 end
