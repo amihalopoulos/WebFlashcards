@@ -19,12 +19,6 @@
   </table>
 </div>
 <div id="current_card">
-  <h4><%= @cards[0].description %></h4>
+  <%= erb :_card, locals: {card: card, round: @round, user: @user} %>
 </div>
-<form action="/guess" method="POST">
-  <input type="text" name="guess[user_input]" placeholder="Your guess here">
-  <input type="hidden" name="guess[card]" value="<%= @cards[0] %>">
-  <input type="hidden" name="guess[round]" value="<%= @round %>">
-  <input type="hidden" name="guess[user]" value="<%= current_user %>">
-  <button type="submit">Submit Guess</button>
-</form>
+

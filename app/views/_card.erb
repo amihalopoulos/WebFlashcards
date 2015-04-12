@@ -1,0 +1,10 @@
+<div id="card">
+  <p><%= card.description %></p>
+</div>
+<form action="/guesses" method="POST">
+  <input type="text" name="guess[user_input]" placeholder="Your guess here">
+  <input type="hidden" name="guess[card_id]" value="<%= card.id %>">
+  <input type="hidden" name="guess[round_id]" value="<%= round.id %>">
+  <input type="hidden" name="guess[user_id]" value="<%= user.id %>">
+  <button type="submit">Submit Guess</button>
+</form>
