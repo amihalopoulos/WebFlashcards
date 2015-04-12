@@ -2,19 +2,24 @@
                                 TODO
                                 ====
 [ ] Authentication ( ALEXEI )
-[ ] Users & Decks ( DAN )
+[ ] Users ( DAN )
 [ ] Rounds ( TARA )
 
 CONTROLLERS
-  [ ] auth ( ALEXEI )
+  [X] auth ( ALEXEI )
   [ ] rounds ( TARA )
   [ ] users ( DAN )
   [ ] decks ( DAN )
 
 VIEWS
   [ ] user dashboard ( DAN )
-  [ ] decks index (all decks for E-E-V-E-R-Y-O-N-E) ( DAN )
-  [ ] signin/singup/signout ( ALEXEI )
+        + [X] my stats
+        + [X] fill in anchors to Alexei's deck controllers
+        + [X] deal with 'Play!' div
+        + [X] create-new-deck button
+
+  [ ] decks index (all decks for E-E-V-E-R-Y-O-N-E) ( ALEXEI )
+  [X] signin/singup/signout ( ALEXEI )
   [ ] round ( TARA )
   [ ] stats ( TARA )
 
@@ -22,4 +27,8 @@ MODEL LOGIC
   [ ] Round#correct_answer? (bool) ( TARA )
   [ ] Round#increase! ( TARA )
 
+DAN NOTES:
++ which round route should each deck link to in _foreign_decks partial?
+
++ talk to team about adding method in round class to get date/time for rounds, to render in user stats
 
