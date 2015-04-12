@@ -1,7 +1,8 @@
 get '/rounds/:id' do |id|
   @round = Round.find(id)
   @user = User.find(session[:user_id])
-  @deck = @round.deck
+  # @deck = @round.deck
+  @deck = Deck.first
   cards = @deck.cards
   if session[:cards]
     redirect "/rounds/#{@round.id}/stats" unless session[:cards].length > 0
@@ -13,12 +14,7 @@ get '/rounds/:id' do |id|
     session[:cards] = @cards
   end
   @cur_card = Card.find_by(current_card(@cards))
-  if @cur_card
-    erb :'round/show'
-  else
-    redirect "/rounds/#{@round.id}/stats"
-    # erb :'round/stats'
-  end
+  erb :'round/show'
 end
 
 post '/rounds' do
@@ -28,3 +24,4 @@ post '/rounds' do
   session[:cards] = nil
   redirect "/rounds/#{round.id}"
 end
+
