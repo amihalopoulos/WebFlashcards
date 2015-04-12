@@ -2,7 +2,7 @@
   <h3>Play a Deck!</h3>
     <ol>
       <% foreign_decks.each do |deck| %>
-       <li><a href='#'><%= deck.topic %></a></li>
+       <li><a href='/deck/<%= deck.id %>'><%= deck.topic %></a></li>
       <% end %>
     </ol>
 </div>
