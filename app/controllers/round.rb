@@ -1,8 +1,7 @@
 get '/rounds/:id' do |id|
   @round = Round.find(id)
   @user = User.find(session[:user_id])
-  # @deck = @round.deck
-  @deck = Deck.first
+  @deck = @round.deck
   cards = @deck.cards
   if session[:cards]
     redirect "/rounds/#{@round.id}/stats" unless session[:cards].length > 0
@@ -13,7 +12,7 @@ get '/rounds/:id' do |id|
     end
     session[:cards] = @cards
   end
-  @cur_card = Card.find_by(current_card(@cards))
+  @cur_card = Card.find(current_card(@cards))
   erb :'round/show'
 end
 
