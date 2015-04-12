@@ -18,12 +18,16 @@
 </table>
 
 
-
+<% if @author %>
 <form action="/card/new" method="GET">
   <input type="hidden" name='deck[topic]' value='<%= @deck.topic %>'>
   <input type="submit" value="Add Card">
 </form>
-<div> <a href=''>Play!</a>
+<% end %>
+<form action="/rounds" method="POST">
+  <input type="hidden" name="deck_id" value="<%= @deck.id %>">
+  <button type="submit">Play!</button>
+</form>
 
 
 
