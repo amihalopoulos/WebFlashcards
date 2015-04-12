@@ -1,0 +1,10 @@
+<div id="stats_form">
+  <h3><%= @deck.topic %></h3>
+  <h1><%= @percentage %>%</h1>
+  <p>Number Correct: <%= @round.num_correct %></p>
+  <p>Number Incorrect: <%= @round.num_incorrect %></p>
+</div>
+<form action="/rounds" method="POST">
+  <input type="hidden" name="deck_id" value="<%= @deck.id %>">
+  <button type="submit">Play Again!</button>
+</form>
