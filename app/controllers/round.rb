@@ -1,9 +1,7 @@
 get '/rounds/:id' do |id|
   @round = Round.find(id)
   @user = User.find(session[:user_id])
-  # Temporary Deck retrieval method
-  # @deck = Deck.find(params[:deck_id])
-  @deck = Deck.first
+  @deck = @round.deck
   cards = @deck.cards
   if params[:cards]
     @cards = params[:cards]
@@ -21,8 +19,8 @@ get '/rounds/:id' do |id|
 end
 
 post '/rounds' do
-  deck = Deck.find(params[:id])
-  user = User.find[session[:user_id]]
+  deck = Deck.find(params[:deck_id])
+  user = User.find(session[:user_id])
   round = Round.create(deck: deck, user: user)
   redirect "/rounds/#{round.id}"
 end
