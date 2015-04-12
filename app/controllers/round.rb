@@ -25,3 +25,9 @@ post '/rounds' do
   redirect "/rounds/#{round.id}"
 end
 
+get '/rounds/:id/stats' do |id|
+  @round = Round.find(id)
+  @deck = @round.deck
+  @percentage = @round.calculate_score
+  erb :'round/stats'
+end
