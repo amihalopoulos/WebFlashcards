@@ -77,3 +77,12 @@ code {
     margin: 20px auto;
     font-size: 1.25em;
 }
+
+#stats_form {
+    width: 500px;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+}
