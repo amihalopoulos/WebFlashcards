@@ -1,0 +1,33 @@
+
+<h3> <%= @deck.topic %> </h3>
+<table>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+      <% if @author %> <th>Change Card</th> <% end %>
+    </tr>
+  <% @deck.cards.each do |card| %>
+    <tr>
+      <td> <%= card.term %> </td>
+      <td> <%= card.description %> </td>
+      <% if @author %>
+      <td> <a href='/card/<%= card.id %>/edit'>Edit</a> | <a href=''>Delete</a></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+
+<% if @author %>
+<form action="/card/new" method="GET">
+  <input type="hidden" name='deck[topic]' value='<%= @deck.topic %>'>
+  <input type="submit" value="Add Card">
+</form>
+<% end %>
+<form action="/rounds" method="POST">
+  <input type="hidden" name="deck_id" value="<%= @deck.id %>">
+  <button type="submit">Play!</button>
+</form>
+
+
+

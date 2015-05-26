@@ -1,0 +1,10 @@
+<h2>Create New Card </h2>
+
+  <form action="/card/new" method = "POST">
+    <label>Term: </label><br>
+    <input type="hidden" name='deck[topic]' value='<%= @deck.topic %>'>
+    <input type="text" name='card[term]' placeholder="term" size="25"><br>
+    <label>Description: </label><br>
+    <input type="text" name='card[description]' placeholder="description" size="25"><br><br>
+    <input type="submit" value="Submit">
+  </form>

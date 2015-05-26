@@ -1,0 +1,8 @@
+<div id='user_dashboard'>
+  <h1><%= @user.name %>'s Dashboard</h1>
+    <div id='profile'>
+      <%= erb :'users/_my_decks', locals: { user_decks: @user.decks } %>
+      <%= erb :'users/_stats', locals: { user_rounds: @user.rounds } %>
+    </div>
+    <%= erb :'users/_foreign_decks', locals: { foreign_decks: @user.foreign_decks } %>
+</div>
